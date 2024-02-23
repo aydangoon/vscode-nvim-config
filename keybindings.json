@@ -47,5 +47,17 @@
         "key": "ctrl+k",
         "command": "selectPrevSuggestion",
         "when": "suggestWidgetVisible && textInputFocus"
+    },
+    
+    // Text Editor Tabs Navigation
+    {
+        "key": "Tab",
+        "command": "workbench.action.nextEditor",
+        "when": "editorTextFocus && neovim.mode != insert"
+    },
+    {
+        "key": "shift+Tab",
+        "command": "workbench.action.previousEditor",
+        "when": "editorTextFocus && neovim.mode != insert"
     }
 ]
