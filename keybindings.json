@@ -1,0 +1,51 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "cmd+g",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && isWeb && !isInEmbeddedEditor"
+    },
+    {
+        "key": "cmd+f12",
+        "command": "-editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && isWeb && !isInEmbeddedEditor"
+    },
+    {
+        "key": "cmd+g",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "f12",
+        "command": "-editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    // ----------------- neo vim -----------------
+    
+    // Movement
+    {
+        "key": "cmd+j",
+        "command": "vscode-neovim.send",
+        "args": "<C-j>"
+    },
+    {
+        "key": "cmd+k",
+        "command": "vscode-neovim.send",
+        "args": "<C-k>"
+    },
+    {
+        "key": "cmd+h",
+        "command": "vscode-neovim.send",
+        "args": "<C-h>"
+    },
+    {
+        "key": "cmd+l",
+        "command": "vscode-neovim.send",
+        "args": "<C-l>"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetVisible && textInputFocus"
+    }
+]
