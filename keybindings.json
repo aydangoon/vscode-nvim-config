@@ -26,25 +26,34 @@
     {
         "key": "cmd+j",
         "command": "vscode-neovim.send",
-        "args": "<C-j>"
+        "args": "<C-j>",
+        "when": "editorTextFocus && neovim.mode != insert"
     },
     {
         "key": "cmd+k",
         "command": "vscode-neovim.send",
-        "args": "<C-k>"
+        "args": "<C-k>",
+        "when": "editorTextFocus && neovim.mode != insert"
     },
     {
         "key": "cmd+h",
         "command": "vscode-neovim.send",
-        "args": "<C-h>"
+        "args": "<C-h>",
     },
     {
         "key": "cmd+l",
         "command": "vscode-neovim.send",
-        "args": "<C-l>"
+        "args": "<C-l>",
+    },
+    
+    // Navigate Suggestions Menu
+    {
+        "key": "cmd+j",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetVisible && textInputFocus"
     },
     {
-        "key": "ctrl+k",
+        "key": "cmd+k",
         "command": "selectPrevSuggestion",
         "when": "suggestWidgetVisible && textInputFocus"
     },
@@ -67,5 +76,24 @@
         "name": "rename selected file",
         "command": "renameFile",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    } 
+    },
+    
+    // Sidebar Actions
+    {
+        "key": "s",
+        "name": "open project search menu",
+        "command": "workbench.action.findInFiles",
+        "when": "editorTextFocus && neovim.mode != insert"
+    },
+    {
+        "key": "f",
+        "name": "open file browser",
+        "command": "workbench.view.explorer",
+        "when": "editorTextFocus && neovim.mode != insert"
+    },
+    {
+        "key": "cmd+j",
+        "command": "search.focus.nextInputBox",
+        "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
+    },
 ]

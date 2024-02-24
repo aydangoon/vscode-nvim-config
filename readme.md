@@ -4,5 +4,4 @@ This is my vscode config. It includes neovim config for the vscode neovim extens
 file, & keybindings.json file.
 
 ## TODO
-* movement keys in suggestions menu
-* some nicer global grepper?
+*nothing right now*
